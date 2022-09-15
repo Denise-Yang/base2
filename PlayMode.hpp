@@ -24,19 +24,19 @@ struct PlayMode : Mode {
 		uint8_t pressed = 0;
 	} left, right, down, up;
 
+	//I really don't expect players to catch more than 255 apples.
+	//if you do, what are you doing with your life
+	uint8_t applecount = 0; 
+
 	//local copy of the game scene (so code can change it during gameplay):
 	Scene scene;
 
-	//hexapod leg to wobble:
-	Scene::Transform *hip = nullptr;
-	Scene::Transform *upper_leg = nullptr;
-	Scene::Transform *lower_leg = nullptr;
-	glm::quat hip_base_rotation;
-	glm::quat upper_leg_base_rotation;
-	glm::quat lower_leg_base_rotation;
-	float wobble = 0.0f;
+	Scene::Transform *apple = nullptr;
+	Scene::Transform *shadow = nullptr;
+	Scene::Transform *bin = nullptr;
+	glm::quat apple_rotation;
 	
 	//camera:
 	Scene::Camera *camera = nullptr;
-
+	Scene::Light *light = nullptr;
 };

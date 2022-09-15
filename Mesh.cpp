@@ -29,6 +29,7 @@ MeshBuffer::MeshBuffer(std::string const &filename) {
 
 	//read + upload data chunk:
 	if (filename.size() >= 5 && filename.substr(filename.size()-5) == ".pnct") {
+		printf("reading pnct %s\n", filename.c_str());
 		read_chunk(file, "pnct", &data);
 
 		//upload data:
@@ -48,6 +49,7 @@ MeshBuffer::MeshBuffer(std::string const &filename) {
 	}
 
 	std::vector< char > strings;
+	printf("reading string\n");
 	read_chunk(file, "str0", &strings);
 
 	{ //read index chunk, add to meshes:

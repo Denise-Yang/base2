@@ -125,8 +125,7 @@ void PlayMode::update(float elapsed) {
 	
 	apple->position.z -= AppleSpeed;
 	if (isIn(apple->position, bin->position)){
-		applecount++;
-		if (applecount >= 254) applecount = 0; // >:) 
+		if (applecount != 254) applecount++; // >:) 
 		apple->position = randPosition();
 		shadow->position.x = apple->position.x;
 		shadow->position.y = apple->position.y;

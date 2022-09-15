@@ -1,15 +1,15 @@
-# (TODO: your game's title)
+# Catch them apples
 
-Author: (TODO: your name)
+Author: Denise Yang
 
-Design: (TODO: In two sentences or fewer, describe what is new and interesting about your game.)
+Design: A 3D apple catcher that's impossibly tedious :)
 
 Screen Shot:
 
 ![Screen Shot](screenshot.png)
 
 How To Play:
+Use WASD to move the bin around. Can you catch 255 apples?
 
-(TODO: describe the controls and (if needed) goals/strategy.)
 
-This game was built with [NEST](NEST.md).
+This game was built with [NEST](NEST.md). All assets created in Blender.
